@@ -41,7 +41,7 @@ void heap_push(Heap* pq, void* data, int priority){
   pq->heapArray[i].data=data;
   pq->heapArray[i].priority=priority;
 
-  while(i>0 && pq->heapArray[i].priority>pq->heapArray[(i-1)/2].prioity){
+  while(i>0 && pq->heapArray[i].priority > pq->heapArray[(i-1)/2].priority){
     heapElem aux=pq->heapArray[i];
     pq->heapArray[i]=pq->heapArray[(i-1)/2];
     pq->heapArray[(i-1)/2]=aux;

@@ -1,0 +1,15 @@
+Mon 16 Oct 2023 12:02:26 AM UTC: 
+ heap.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:38:18: error: assignment to ‘heapElem *’ {aka ‘struct nodo *’} from incompatible pointer type ‘int *’ [-Werror=incompatible-pointer-types]
+   38 |   heap->heapArray=(int*)malloc(sizeof(int)*3);
+      |                  ^
+heap.c:41:9: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capacity’; did you mean ‘capac’?
+   41 |   heap->capacity=3;
+      |         ^~~~~~~~
+      |         capac
+cc1: all warnings being treated as errors
+Compilation failed
+45c088e

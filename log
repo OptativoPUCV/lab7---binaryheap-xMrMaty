@@ -93,3 +93,14 @@ heap.c:54:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 bfdf0c2
+Mon 16 Oct 2023 12:18:59 AM UTC: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:44:65: error: ‘heapElem’ {aka ‘struct nodo’} has no member named ‘prioity’; did you mean ‘priority’?
+   44 |   while(i>0 && pq->heapArray[i].priority>pq->heapArray[(i-1)/2].prioity){
+      |                                                                 ^~~~~~~
+      |                                                                 priority
+Compilation failed
+5405887

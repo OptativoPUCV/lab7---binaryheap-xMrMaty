@@ -28,7 +28,7 @@ void* heap_top(Heap* pq){
 
 void heap_push(Heap* pq, void* data, int priority){
   if(pq==NULL || pq->size==0){
-    return NULL;
+    return;
   }
   
   if(pq->size==pq->capac){
@@ -52,7 +52,9 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-
+  if(pq==NULL || pq->size==0){
+    return NULL;
+  }
 }
 
 Heap* createHeap(){

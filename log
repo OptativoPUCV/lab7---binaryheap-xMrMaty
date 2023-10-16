@@ -74,3 +74,22 @@ heap.c:44:65: error: ‘heapElem’ {aka ‘struct nodo’} has no member named 
 cc1: all warnings being treated as errors
 Compilation failed
 2eaaacc
+Mon 16 Oct 2023 12:18:52 AM UTC: 
+ heap.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+heap.c: In function ‘heap_push’:
+heap.c:44:65: error: ‘heapElem’ {aka ‘struct nodo’} has no member named ‘prioity’; did you mean ‘priority’?
+   44 |   while(i>0 && pq->heapArray[i].priority>pq->heapArray[(i-1)/2].prioity){
+      |                                                                 ^~~~~~~
+      |                                                                 priority
+heap.c: In function ‘heap_pop’:
+heap.c:56:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   56 |     return NULL;
+      |            ^~~~
+heap.c:54:6: note: declared here
+   54 | void heap_pop(Heap* pq){
+      |      ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bfdf0c2

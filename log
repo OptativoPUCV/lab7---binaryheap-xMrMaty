@@ -36,3 +36,11 @@ heap.c:37:7: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘ca
       |       ^~
 Compilation failed
 32112b1
+Mon 16 Oct 2023 12:05:08 AM UTC: 
+In file included from test.c:4:
+heap.c: In function ‘createHeap’:
+heap.c:37:7: error: ‘Heap’ {aka ‘struct Heap’} has no member named ‘capacidad’
+   37 |   dato->capacidad=3;
+      |       ^~
+Compilation failed
+c945f3b
